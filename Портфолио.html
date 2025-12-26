@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Константин Таллеров — Портфолио</title>
+
+  <!-- Google Fonts: Anime-style font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'VT323', monospace;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      transition: background 0.5s ease;
+    }
+
+    .portfolio-container {
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      gap: 20px;
+      position: relative;
+      perspective: 1000px;
+    }
+
+    .side {
+      flex: 1;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.6s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .white-side {
+      background: linear-gradient(135deg, #fff, #f9f9f9);
+      color: #333;
+      transform: rotateY(0deg);
+    }
+
+    .black-side {
+      background: linear-gradient(135deg, #111, #222);
+      color: #fff;
+      transform: rotateY(180deg);
+    }
+
+    .portfolio-container:hover .white-side {
+      transform: rotateY(-180deg);
+    }
+
+    .portfolio-container:hover .black-side {
+      transform: rotateY(0deg);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .name {
+      font-size: 2.5rem;
+      font-family: 'Press Start 2P', cursive;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff6b6b;
+      margin: 0 auto 20px;
+      box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+      transition: transform 0.3s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.05);
+    }
+
+    .section {
+      margin-bottom: 25px;
+      padding: 15px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(5px);
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2 i {
+      color: #ff6b6b;
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+      list-style: none;
+    }
+
+    .skills-list li {
+      background: rgba(255,255,255,0.15);
+      padding: 8px;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    .skills-list li:hover {
+      background: rgba(255,107,107,0.3);
+    }
+
+    .interests-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .interests-list span {
+      background: rgba(255,255,255,0.15);
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-size: 0.9rem;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-container {
+        flex-direction: column;
+      }
+      .name {
+        font-size: 2rem;
+      }
+      .photo {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="portfolio-container">
+    <!-- Белая сторона -->
+    <div class="side white-side">
+      <div class="header">
+        <h1 class="name">Константин Таллеров</h1>
+        <img src="https://i.imgur.com/9JmWpZq.jpg" alt="Фото Константина" class="photo">
+      </div>
+
+      <div class="section">
+        <h2><i class="fas fa-laptop-code"></i> Что я изучаю</h2>
+        <ul class="skills-list">
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>Java</li>
+          <li>C++</li>
+          <li>Golang</li>
+          <li>PHP + SQL</li>
+          <li>React</li>
+          <li>Unity</li>
+          <li>Unreal Engine</li>
+          <li>Figma</li>
+          <li>Photoshop</li>
+          <li>Roblox Maps</li>
+          <li>Нейросети</li>
+          <li>Gobot</li>
+          <li>Вайб-кодинг</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><i class="fas fa-gamepad"></i> Мои интересы</h2>
+        <div class="interests-list">
+          <span>Катание на коньках 🛼</span>
+          <span>Футбол ⚽</span>
+          <span>Standoff 2</span>
+          <span>Brawl Stars</span>
+          <span>Школа 📚</span>
+          <span>Английский язык 🇬🇧</span>
+          <span>Игры в снежки ☃️</span>
+        </div>
+      </div>
+
+      <div class="footer">
+        Автор проекта: Константин Таллеров © 2025
+      </div>
+    </div>
+
+    <!-- Чёрная сторона -->
+    <div class="side black-side">
+      <div class="header">
+        <h1 class="name">Константин Таллеров</h1>
+        <img src="https://i.imgur.com/9JmWpZq.jpg" alt="Фото Константина" class="photo">
+      </div>
+
+      <div class="section">
+        <h2><i class="fas fa-star"></i> Мои качества</h2>
+        <ul style="padding-left: 20px; line-height: 1.6;">
+          <li>Любознательность — всегда хочу узнать больше!</li>
+          <li>Усидчивость — довожу проекты до конца.</li>
+          <li>Креативность — люблю необычные решения.</li>
+          <li>Командный игрок — отлично лажу с друзьями и в команде.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2><i class="fas fa-rocket"></i> Что дальше?</h2>
+        <p style="line-height: 1.6;">
+          Мечтаю создавать свои игры, сайты и приложения.
+          Может быть, даже запущу свой стартап!
+          Мир технологий безграничен — и я только начинаю своё путешествие. 🌍✨
+        </p>
+      </div>
+
+      <div class="footer">
+        Автор проекта: Константин Таллеров © 2025
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Анимация при наведении — поворот сторон
+    const container = document.querySelector('.portfolio-container');
+    const sides = document.querySelectorAll('.side');
+
+    container.addEventListener('mouseenter', () => {
+      sides[0].style.transform = 'rotateY(-180deg)';
+      sides[1].style.transform = 'rotateY(0deg)';
+    });
+
+    container.addEventListener('mouseleave', () => {
+      sides[0].style.transform = 'rotateY(0deg)';
+      sides[1].style.transform = 'rotateY(180deg)';
+    });
+  </script>
+</body>
+</html>
